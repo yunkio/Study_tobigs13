@@ -1,0 +1,6 @@
+gcloud compute ssh instance-1 --zone=us-central1-f --ssh-flag="-L 8081:localhost:8081"
+jupyter notebook --port=8081 --no-browser --NotebookApp.token=''
+nohup python 돌릴파일 &(& 붙여야 계속 돌아감)
+cat nohup.out
+
+top -b -n1 | grep -Po '[0-9,]+ id' | awk '{print 100-$1}'
